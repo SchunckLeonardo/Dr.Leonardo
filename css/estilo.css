@@ -1,0 +1,489 @@
+/* Fontes e Animações */
+
+@font-face {
+	font-family: "coolvetica";
+	src: url(../fontes/coolvetica.woff);
+	font-family: "CaviarDreams";
+	src: url(../fontes/CaviarDreams.woff);
+}
+
+@keyframes animacao-seta {
+
+	from {
+		transform: rotate(180deg);
+	}
+
+	to {
+		transform: rotate(-45deg);
+	}
+}
+
+@keyframes animacao-texto {
+
+	from {
+		opacity: 0.0;
+	}
+
+	to {
+		opacity: 1.0;
+	}
+
+}
+
+/* Estilo Geral */
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: sans-serif;
+	background-color: whitesmoke;
+}
+
+/* Scrollbar */
+
+body::-webkit-scrollbar {
+	width: 6px;
+}
+
+body::-webkit-scrollbar-track {
+	background: #fff;
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: rgb(137,236,218);
+	border-radius: 20px;
+	border: 3px solid transparent;
+}
+
+/* Formatação Cabeçalho */
+
+header {
+	position: absolute;
+	width: 100%;
+	height: 200px;
+	background: white url(../imagens/banner.png) no-repeat center;
+	z-index: 5;
+}
+
+#logo a {
+	border-bottom: none;
+}
+
+#logo img {
+	background-repeat: no-repeat;
+	height: 200px;
+	width: 200px;
+	display: inline;
+	margin-left: 150px;
+}
+
+nav {
+	float: right;
+	position: relative;
+		top: -110px;
+		left: -150px;
+	z-index: 4;
+}
+
+nav ul {
+	list-style-type: none;
+}
+
+nav ul li {
+	float: left;
+}
+
+nav li a {
+	padding: 15px;
+	color: #00c4cc;
+	font-size: 20px;
+	text-decoration: none;
+	display: inline;
+}
+
+/* Formatação do Link */
+
+a:hover {
+	color: #00c4cc;
+	border-bottom: 1px solid black;
+	text-decoration: none;
+}
+
+/* Slider */
+
+.container-fluid {
+	padding: 0;
+}
+
+#mainSlider .carousel-inner, #mainSlider .carousel-item {
+	height: 90vh;
+	width: 100%;
+}
+
+#mainSlider .carousel-caption {
+	top: 30%;
+}
+
+#mainSlider .carousel-caption h2 {
+	font-size: 50px;
+	margin-bottom: 30px;
+}
+
+#mainSlider .carousel-caption p {
+	font-size: 22px;
+	font-weight: 300;
+	margin-bottom: 100px;
+	color: #fff;
+}
+
+.main-btn {
+	background-color: #65DAF9;
+	color: #fff;
+	text-transform: uppercase;
+	width: 200px;
+	height: 60px;
+	padding: 10px 20px;
+	border-radius: 30px;
+	border: 3px solid transparent;
+	transition: 0.5s;
+}
+
+.main-btn:hover {
+	text-decoration: none;
+	color: #fff;
+	background-color: transparent;
+	border-color: #65DAF9;
+}
+
+.carousel-indicators .active {
+	background-color: #65DAF9;
+}
+
+#mainSlider a {
+	border-bottom: none;
+}
+
+/* Conteúdo Principal */
+
+#conteudo h1 {
+	text-align: center;
+	margin-top: 80px;
+	font-family: "CaviarDreams";
+	text-shadow: 10px 10px 6px 	rgb(67,232,216);
+}
+
+#conteudo p {
+	font-family: "coolvetica";
+	text-align: justify;
+	font-size: 25px;
+	margin-top: 40px;
+	padding-left: 130px;
+	padding-right: 130px;
+}
+
+#conteudo span {
+	margin-left: 30em;
+}
+
+#conteudo span img {
+	transform: rotate(-45deg);
+	animation: animacao-seta 3s;
+}
+
+#conteudo #video {
+	position: relative;
+		left: 100px;
+		top: 150px;
+	border: 5px solid rgb(137,236,218);
+}
+
+/* Conteúdo Quem Somos */
+
+#quem-somos h1 {
+	text-align: center;
+	margin-top: 80px;
+	margin-bottom: 40px;
+	font-family: "CaviarDreams";
+	text-shadow: 10px 10px 6px 	rgb(67,232,216);
+}
+
+#quem-somos p {
+	font-family: "coolvetica";
+	text-align: justify;
+	font-size: 25px;
+	margin-top: 40px;
+	padding-left: 130px;
+	padding-right: 130px;
+}
+
+#quadrado {
+	width: 315px;
+	height: 808px;
+	border: 2px solid gray;
+	border-radius: 25px;
+	justify-content: center;
+	margin: 0 auto;
+}
+
+#quadrado:hover {
+	background-color: rgb(192, 192, 192);
+	width: 900px;
+	opacity: 0.6;
+	transition: all 1s ;
+}
+
+#quadrado:hover .quadrado-texto {
+	visibility: visible;
+	animation: animacao-texto 5s;
+	transition: all 2s;
+}
+
+#quadrado .quadrado-texto {
+	visibility: hidden;
+	width: 800px;
+	position: relative;
+		top: -800px;
+		left: 200px;	
+}
+
+#quadrado .quadrado-texto h2 {
+	margin-left: 100px;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+#quadrado .quadrado-texto p {
+	font-family: "coolvetica";
+}
+
+#quadrado img {
+	width: 309px;
+	height: 808px;
+}
+
+/* Conteúdo Localização */
+
+#local h1 {
+	text-align: center;
+	margin-top: 80px;
+	margin-bottom: 40px;
+	font-family: "CaviarDreams";
+	text-shadow: 10px 10px 6px rgb(67,232,216);
+}
+
+#hospital {
+	width: 700px;
+	height: 500px;
+	margin-left: 80px;
+	background-color: rgb(192, 192, 192);
+	border: 3px solid transparent;
+	border-radius: 25px;
+	float: left;
+}
+
+#hospital h4 {
+	padding-top: 20px;
+	margin-left: 50px;
+	text-decoration: underline;
+}
+
+#hospital img {
+	border: 5px solid rgb(137,236,218);
+	border-radius: 20px;
+	width: 600px;
+	height: 400px;
+	margin-top: 20px;
+	margin-left: 50px;
+}
+
+#maps {
+	width: 700px;
+	height: 500px;
+	margin-left: 270px;
+	background-color: rgb(192, 192, 192);
+	border: 3px solid transparent;
+	border-radius: 25px;
+	float: left;
+}
+
+#maps #mapa h4 {
+	padding-top: 20px;
+	margin-left: 50px;
+	text-decoration: underline;
+	position: relative;
+		left: 170px;
+}
+
+#maps #mapa iframe {
+	border: 5px solid rgb(137,236,218);
+	border-radius: 20px;
+	width: 600px;
+	height: 400px;
+	margin-top: 20px;
+	margin-left: 50px;
+}
+
+/* Rodapé */
+
+footer {
+	clear: both;
+	position: absolute;
+		top: 3500px;
+	height: 300px;
+}
+
+footer#imc-footer {
+	position: absolute;
+		top: 1400px;
+}
+
+footer h5 {
+	margin-top: 20px;
+	margin-left: 40px;
+}
+
+section li {
+	margin-left: 80px;
+}
+
+#logo-rodape a {
+	border-bottom: none;
+}
+
+#logo-rodape img {
+	background-repeat: no-repeat;
+	height: 200px;
+	width: 200px;
+	display: inline;
+}
+
+p.direitos {
+	text-align: center;
+}
+
+p.direitos span {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+
+
+/* Início IMC main */
+
+#main-imc h1 {
+	position: relative;
+		top: 300px;
+	text-align: center;
+	font-family: "CaviarDreams";
+	text-shadow: 10px 10px 6px rgb(67,232,216);
+}
+
+#main-imc p {
+	position: relative;
+		top: 320px;
+	text-align: center;
+	font-family: "coolvetica";
+	font-size: 25px;
+}
+
+.tabela-imc table {
+	width: 800px;
+	height: 600px;
+	position: relative;
+		top: 320px;
+		left: 28%;
+	border: 5px solid rgb(137,236,218);
+}
+
+tr.cor-sim {
+	background-color: rgb(192, 192, 192);
+}
+
+table th {
+	border-bottom: 3px solid black;
+}
+
+/* Cadastrar */
+
+body#cadastrar {
+	background: url(../imagens/background-cadastrar.jpg);
+	margin: 0 auto;
+}
+
+#logo-cadastrar a {
+	border-bottom: none;
+}
+
+#logo-cadastrar img {
+	background-repeat: no-repeat;
+	height: 200px;
+	width: 200px;
+	display: inline;
+	margin-left: 150px;
+}
+
+#caixa-cadastro {
+	width: 800px;
+	height: 600px;
+	border: 1px solid rgba(192, 192, 192, 0.8);
+	background-color: rgba(192, 192, 192, 0.8);
+	margin: 0 auto;
+	border-radius: 25px;
+}
+
+#conteudo-cadastro form {
+	text-align: center;
+	padding: 30px;
+}
+
+#conteudo-cadastro label {
+	font-family: "coolvetica";
+	font-size: 35px;
+	text-shadow: 10px 10px 6px rgb(67,232,216);
+	border-bottom: 1px solid black;
+}
+
+#conteudo-cadastro input {
+	border: 1px solid transparent;
+	border-radius: 10px;
+	width: 250px;
+	height: 35px;
+}
+
+#conteudo-cadastro input:hover {
+	background-color: rgb(192, 192, 192);
+}
+
+
+#conteudo-cadastro select {
+	border: 1px solid transparent;
+	border-radius: 10px;
+	width: 250px;
+	height: 35px;
+}
+
+#conteudo-cadastro input.enviar {
+	position: relative;
+		top: 50px;
+	width: 300px;
+	height: 50px;
+	cursor: pointer;
+}
+
+#conteudo-cadastro input.enviar:hover {
+	background-color: rgb(192, 192, 192);
+	transition: all 0.5s;
+}
+
+#cadastrar h1 {
+	font-family: "CaviarDreams";
+	text-shadow: 10px 10px 6px rgb(67,232,216);
+	text-align: center;
+	position: relative;
+		top: -100px;
+	font-size: 60px;
+}
